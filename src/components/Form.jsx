@@ -38,15 +38,17 @@ class Form extends Component {
 						type="password"
 						value={this.state.passwordText}
 						onChange={this.handlePasswordChange}
+						labelName="Password"
 					></InputField>
 					<InputField
 						type="password"
 						value={this.state.confirmPasswordText}
 						onChange={this.handleConfirmPasswordChange}
+						labelName="Confirm Password"
 					></InputField>
 				</form>
 				{ this.state.validationResultText && <label className="vertical">{this.state.validationResultText}</label> }
-				<button className="vertical" onClick={this.submit}>Submit</button>
+				<button className="margin-Top" onClick={this.submit}>Submit</button>
 			</div>
 		);
 	}

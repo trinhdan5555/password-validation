@@ -1,10 +1,12 @@
-export const InputField = ({ type, value, onChange }) => {
+export const InputField = ({ type, value, onChange, labelName }) => {
 	return (
-		<input
-			className="vertical"
-			type={type}
-			value={value}
-			onChange={onChange}
-		/>
+		<div className="vertical">
+			<label>{`${labelName}: `}</label>
+			<input
+				type={type}
+				value={value}
+				onChange={onChange}
+			/>
+		</div>
 	);
 }
